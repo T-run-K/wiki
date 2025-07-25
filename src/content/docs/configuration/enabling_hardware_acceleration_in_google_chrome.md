@@ -89,6 +89,22 @@ This method provides direct confirmation from the browser itself:
 
 **Notes:** Leverages Vulkan (via ANGLE) and VA-API. `--ozone-platform-hint=x11` can be useful even on Wayland for certain acceleration paths.
 
+## GPU & Browser Configurations
+
+### NVIDIA GeForceRTX 3070 (Ungoogled Chromium)
+
+- **Browser:** Ungoogled Chromium
+    
+- **GPU:** NVIDIA GeForce RTX 3070
+    
+- **Flags File:** `~/.config/chromium-flags.conf`
+    
+
+```bash
+--use-gl=angle
+--use-angle=vulkan
+--enable-features=Vulkan,VulkanFromANGLE,DefaultANGLEVulkan,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder,VaapiIgnoreDriverChecks,UseMultiPlaneFormatForHardwareVideo
+```
 ---
 
 ### Template to contribute
